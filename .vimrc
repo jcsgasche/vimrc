@@ -1,24 +1,3 @@
-""" -- Neovim config --
-set number
-
-""" -- IdeaVim config --
-if has('ide')
-	" Highlight copied text
-	Plug 'machakann/vim-highlightedyank'
-	" Commentary plugin
-	Plug 'tpope/vim-commentary'
-        " Use IDE clipboard
-	set clipboard+=ideaput
-
-	nnoremap zC :action CollapseRegionRecursively<CR>
-    nnoremap zO :action ExpandRegionRecursively<CR>
-
-    nmap g] :action GotoImplementation<CR>
-
-    nnoremap gb :action Back<CR>
-    nnoremap gf :action Forward<CR>
-endif
-
 "" Suggested options by IdeaVim
 " Show a few lines of context around the cursor. Note that this makes the
 " text scroll if you mouse-click near the start or end of the window.
@@ -40,13 +19,33 @@ map Q gq
 "" Map \b to toggle the breakpoint on the current line
 "map \b <Action>(ToggleLineBreakpoint)
 
-
 "" -- General config --
 " jk to escape
-inoremap jk <Esc>
+" inoremap jk <Esc>
 
 " Connect keyboard to vim clipboard
 set clipboard=unnamedplus
 
 " Set relative line numbers
-:set rnu
+set relativenumber
+
+""" -- VS Code config --
+inoremap jk <Esc>
+
+""" -- IdeaVim config --
+if has('ide')
+	" Highlight copied text
+	Plug 'machakann/vim-highlightedyank'
+	" Commentary plugin
+	Plug 'tpope/vim-commentary'
+        " Use IDE clipboard
+	set clipboard+=ideaput
+
+	nnoremap zC :action CollapseRegionRecursively<CR>
+    nnoremap zO :action ExpandRegionRecursively<CR>
+
+    nmap g] :action GotoImplementation<CR>
+
+    nnoremap gb :action Back<CR>
+    nnoremap gf :action Forward<CR>
+endif
