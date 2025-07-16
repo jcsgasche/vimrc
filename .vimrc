@@ -19,8 +19,7 @@ if has('ide')
     nnoremap gf :action Forward<CR>
 endif
 
-
-"" Suggested options by IdeaVim 
+"" Suggested options by IdeaVim
 " Show a few lines of context around the cursor. Note that this makes the
 " text scroll if you mouse-click near the start or end of the window.
 set scrolloff=6
@@ -46,9 +45,8 @@ map Q gq
 " jk to escape
 inoremap jk <Esc>
 
-" Delete with dd instead of cutting
-nnoremap dd "_dd
-vnoremap dd "_d
-
 " Connect keyboard to vim clipboard
 set clipboard=unnamedplus
+
+" Set relative line numbers
+:set rnu
