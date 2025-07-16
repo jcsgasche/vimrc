@@ -29,6 +29,12 @@ set clipboard=unnamedplus
 " Set relative line numbers
 set relativenumber
 
+" Deletion mappings to null register
+nnoremap d "0d
+nnoremap dd "0dd
+nnoremap D "0D
+vnoremap d "0d
+
 """ -- VS Code config --
 inoremap jk <Esc>
 
