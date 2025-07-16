@@ -9,6 +9,14 @@ if has('ide')
 	Plug 'tpope/vim-commentary'
         " Use IDE clipboard
 	set clipboard+=ideaput
+
+	nnoremap zC :action CollapseRegionRecursively<CR>
+    nnoremap zO :action ExpandRegionRecursively<CR>
+
+    nmap g] :action GotoImplementation<CR>
+
+    nnoremap gb :action Back<CR>
+    nnoremap gf :action Forward<CR>
 endif
 
 
